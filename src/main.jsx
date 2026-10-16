@@ -9,7 +9,7 @@ import { AcademyApp } from './pages/AcademyApp.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <RootLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -54,17 +54,17 @@ export function EbookPage() {
           </div>
 
           <div className="flex items-center gap-3">
-            {/* View original PDF button */}
-            <a
-              href={meta.pdfPath}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary text-white text-xs font-semibold shadow-primary-glow hover:bg-primary-dark transition-colors magnetic-btn"
+            {/* Original PDF button (disabled) */}
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-muted/50 text-muted dark:text-dark-muted text-xs font-semibold opacity-60 cursor-not-allowed select-none"
             >
               <FileText className="w-3.5 h-3.5" />
               View Original PDF
               <ExternalLink className="w-3 h-3" />
-            </a>
+            </button>
 
             {/* Sidebar toggle (mobile) */}
             <button
